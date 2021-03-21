@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./Login.css";
 
-const Login = () => {
+const Login = ({ setToken }) => {
   return (
     <div className="login-wrapper" style={styles.wrapper}>
       <form>
@@ -19,6 +20,10 @@ const Login = () => {
       </form>
     </div>
   );
+};
+
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired,
 };
 
 export default Login;
